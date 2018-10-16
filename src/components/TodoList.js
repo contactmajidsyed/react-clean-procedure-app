@@ -1,17 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
+import Arrow from './Arrow';
 
 const TodoList = ({ todos, toggleTodo }) => (
-  <ul>
-    {todos.map(todo =>
-      <Todo
+
+  <div>
+    {todos.map((todo, index) =>
+      <span>
+        <Todo
         key={todo.id}
         {...todo}
-        onClick={() => toggleTodo(todo.id)}
-      />
+        onClick={() => toggleTodo(todo.id)}/>
+        <Arrow stepNumber={index} totalSteps={todos.length}/>
+      </span>
     )}
-  </ul>
+  </div>
 )
 
 TodoList.propTypes = {
