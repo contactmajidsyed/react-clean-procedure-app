@@ -4,7 +4,7 @@
 /node_modules
 
 # testing
-/coverage
+/src/coverage
 /src/actions/lcov-report
 /src/actions/clover.xml
 /src/actions/coverage-final.json
