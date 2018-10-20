@@ -8,7 +8,8 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
     "jest": "^23.6.0",
-    "react-scripts": "^2.0.5"
+    "react-scripts": "^2.0.5",
+    "redux-devtools-extension": "^2.13.5"
   },
   "dependencies": {
     "prop-types": "^15.6.1",
