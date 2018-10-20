@@ -10,8 +10,10 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
+export const toggleTodo = (id, isFirstStep) => ({
   type: 'TOGGLE_TODO',
-  id
+  id,
+  isFirstStep
 })
 
 export const VisibilityFilters = {
