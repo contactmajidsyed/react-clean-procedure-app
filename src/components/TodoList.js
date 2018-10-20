@@ -7,11 +7,13 @@ const TodoList = ({ todos, toggleTodo }) => (
 
   <div>
     {todos.map((todo, index) =>
+
       <span>
         <Todo
         key={todo.id}
         {...todo}
-        onClick={() => toggleTodo(todo.id)}/>
+        onClick={() => toggleTodo(todo.id, index === 0)}
+        />
         <Arrow stepNumber={index} totalSteps={todos.length}/>
       </span>
     )}

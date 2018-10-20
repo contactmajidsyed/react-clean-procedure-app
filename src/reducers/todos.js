@@ -14,6 +14,7 @@ const todos = (state = [], action) => {
         (todo.id === action.id)
           ? {...todo, completed: !todo.completed}
           : todo
+        (todo.id === action.id && action.isFirstStep) ? {...todo, completed: !todo.completed} : todo
       )
     default:
       return state
