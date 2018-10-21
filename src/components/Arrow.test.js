@@ -2,11 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import MyComponent from './Arrow';
 import Arrow from './Arrow';
+import ArrowRight from '@material-ui/icons/ArrowRightAlt';
 describe('Arrow', () => {
   it('should render an arrow', () => {
     const component = shallow(<Arrow stepNumber={2} totalSteps ={4} />);
   
-    expect(component.text()).toBe(" -> ");
+    expect(component.length).toEqual(1);
   });
 
   it('should not render an arrow for last step', () => {
