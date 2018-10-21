@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 const AddTodo = ({ dispatch }) => {
   let input
@@ -15,10 +17,10 @@ const AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
-        <input ref={node => input = node} />
-        <button type="submit">
+        <Input inputRef={node => input = node} className="mainInput"/>
+        <Button variant="contained" color="primary" type="submit">
           Add Step
-        </button>
+        </Button>
       </form>
     </div>
   )

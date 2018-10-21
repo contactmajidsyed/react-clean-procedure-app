@@ -2,23 +2,32 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
 import Arrow from './Arrow';
+import classNames from 'classnames';
+import './TodoList.css'
+class TodoList extends React.Component {
+  render() {
+let blue = classNames({
+  'blue': true
+})
 
-const TodoList = ({ todos, toggleTodo }) => (
+    return (
+      <div>
+        {this.props.todos.map((todo, index) =>
 
-  <div>
-    {todos.map((todo, index) =>
-
-      <span>
-        <Todo
-        key={todo.id}
-        {...todo}
-        onClick={() => toggleTodo(todo.id, index === 0)}
-        />
-        <Arrow stepNumber={index} totalSteps={todos.length}/>
-      </span>
-    )}
-  </div>
-)
+          <span>
+            <Todo
+              key={todo.id}
+              stepNumber={index}
+              {...todo}
+              onClick={() => this.props.toggleTodo(todo.id, index === 0)}
+            />
+            <Arrow stepNumber={index} totalSteps={this.props.todos.length} />
+          </span>
+        )}
+      </div>
+    )
+  }
+};
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
