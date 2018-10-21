@@ -2,14 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
 import Arrow from './Arrow';
-import classNames from 'classnames';
 import './TodoList.css'
 class TodoList extends React.Component {
   render() {
-let blue = classNames({
-  'blue': true
-})
-
     return (
       <div>
         {this.props.todos.map((todo, index) =>

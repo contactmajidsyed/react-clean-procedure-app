@@ -4,13 +4,11 @@ import Todo from './Todo';
 import './CompletedTable.css'
 class CompletedTodoList extends React.Component {
     render() {
-
-
         return (
             <table class="completedTable">
             {(this.props.completedTodos[0]) ? <th>Completed Steps</th>: ""}
                 {this.props.completedTodos.map((todo) =>
-                    <tr><td key={todo.id}><Todo
+                    <tr  key={todo.id} ><td key={todo.id}><Todo
                         key={todo.id}
                         {...todo}/>
                     </td></tr>

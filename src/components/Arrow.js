@@ -4,7 +4,7 @@ import ArrowRight from '@material-ui/icons/ArrowRightAlt';
 
 import './Arrow.css';
 const Arrow = ({stepNumber, totalSteps}) => {
-    let arrow = (totalSteps !== stepNumber + 1 && totalSteps !== 1) ?  <ArrowRight/>  : ""
+    let arrow = (totalSteps !== stepNumber + 1 && totalSteps !== 1) ?  <ArrowRight/>  : " "
     
     return <span className="arrow">{arrow}</span>
 }
