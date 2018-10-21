@@ -17,9 +17,10 @@ describe('todo actions', () => {
   })
 
   it('toggleTodo should create TOGGLE_TODO action', () => {
-    expect(actions.toggleTodo(1)).toEqual({
+    expect(actions.toggleTodo(1, true)).toEqual({
       type: 'TOGGLE_TODO',
-      id: 1
+      id: 1,
+      isFirstStep: true
     })
   })
 })

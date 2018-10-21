@@ -93,16 +93,17 @@ describe('todos reducer', () => {
         }
       ], {
         type: 'TOGGLE_TODO',
-        id: 1
+        id: 0,
+        isFirstStep: true
       })
     ).toEqual([
       {
         text: 'Run the tests',
-        completed: true,
+        completed: false,
         id: 1
       }, {
         text: 'Use Redux',
-        completed: false,
+        completed: true,
         id: 0
       }
     ])
