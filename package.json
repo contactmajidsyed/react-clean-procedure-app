@@ -2,7 +2,7 @@
   "name": "todos",
   "version": "0.0.1",
   "private": true,
-  "homepage": "http://contactmajidsyed.github.io/reactProcedureApp",
+  "homepage": "https://contactmajidsyed.github.io/reactProcedureApp",
   "devDependencies": {
     "babel-jest": "^23.6.0",
     "enzyme": "^3.7.0",
